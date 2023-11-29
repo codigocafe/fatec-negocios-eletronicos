@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nobel - A maior rede de livrarias do Brasil</title>
-    <meta name="description" content="A Livraria Nobel é uma empresa brasileira fundada em São Paulo no ano de 1943 pelo italiano Cláudio Milano . A rede de franquias Nobel oferece aos seus clientes o melhor do mercado literário, além de papelaria e presentes em suas mais de 220 lojas espalhadas pelo Brasil e no exterior.">
-    <meta name="keywords" content="Livraria, Nobel, Livros, Livro, Sobre">
+    <title>StreamElite- Navegue pelas Estrelas do Streaming.</title>
+    <meta name="description" content="Navegue pelas Estrelas do Streaming e descubra o universo infinito de entretenimento, onde cada streaming é uma constelação de qualidade.">
+    <meta name="keywords" content="Filmes, Series, Streaming">
     <link rel="shortcut icon" href="_img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 		
@@ -26,7 +26,7 @@
 
 		<header class="header">
 			<div class="header__logo">
-				<a href="index.html">Streammer</a>
+				<a href="index.html"><img src=".//_img/logo.png" alt="Logo StreamElite">StreamElite</a>
 			</div>
 			<nav class="header__wrapper">
 				<ul class="header__menu">
@@ -41,9 +41,9 @@
 		<div class="slide" id="landing">
 			<div class="slide__wrapper">
 				<div class="slide__content">
-					<h1 class="slide__title">Livraria Nobel</h1>
-					<p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan bibendum mauris, in hendrerit nunc consequat non. Pellentesque ut urna velit.</p>
-					<a href="#main" class="button">Compre seu Livro</a>
+					<h1 class="slide__title">StreamElite</h1>
+					<p class="slide__text">Navegue pelas Estrelas do Streaming e descubra o universo infinito de entretenimento, onde cada streaming é uma constelação de qualidade.</p>
+					<a href="#main" class="button">Conheça mais</a>
 				</div>
 			</div>
 		</div>
@@ -51,24 +51,39 @@
 		<main id="main" class="content">
 			<section class="content__wrapper">
 				<div class="content__strammers">
-					<a href="#"><img src="./_img/netflix.png" alt="Netflix"></a>
-					<a href="#"><img src="./_img/prime_video.png" alt="Prime Video"></a>
-					<a href="#"><img src="./_img/globoplay.png" alt="Globoplay"></a>
+					<a data-content="netflix" onclick="toggleContent(this)"><img src="./_img/netflix.png" alt="Netflix"></a>
+					<a data-content="prime" onclick="toggleContent(this)"><img src="./_img/prime_video.png" alt="Prime Video"></a>
+					<a data-content="globoplay" onclick="toggleContent(this)"><img src="./_img/globoplay.png" alt="Globoplay"></a>
+					<a data-content="disney" onclick="toggleContent(this)"><img src="./_img/disney_plus.png" alt="Disney+"></a>
 				</div>
 			</section>
 			<section class="content__text">
-				<div>
+				<!-- Netflix -->
+				<div id="netflix" class="active">
 					<h1 class="content__title">Netflix</h1>
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus ab repellat vel recusandae ducimus, incidunt maxime nobis, fugit quo velit, mollitia molestias. Rem a ea suscipit eos illo doloremque voluptate.</p><br>
-					<a href="#" class="button button--reverse">Acessar streamer</a>
+					<p>A Netflix é uma plataforma de streaming que oferece uma extensa biblioteca de filmes, séries, documentários e conteúdos originais.</p><br>
+					<a href="https://netflix.com" target="_blank" class="button button--reverse">Acessar streamer</a>
+				</div>
+				<!-- Prime Video -->
+				<div id="prime">
+					<h1 class="content__title">Prime Video</h1>
+					<p>Amazon Prime Video é um serviço de streaming que oferece uma ampla gama de filmes, séries de TV, documentários e programação original.</p><br>
+					<a href="https://globoplay.globo.com/" target="_blank" class="button button--reverse">Acessar streamer</a>
+				</div>
+				<!-- Globoplay -->
+				<div id="globoplay">
+					<h1 class="content__title">Globoplay</h1>
+					<p>O Globoplay é um serviço de streaming brasileiro que oferece uma ampla variedade de conteúdos, incluindo novelas, séries, programas de TV, filmes e produções originais da Rede Globo.</p><br>
+					<a href="https://www.primevideo.com/" target="_blank" class="button button--reverse">Acessar streamer</a>
+				</div>
+				<!-- Disney+ -->
+				<div id="disney">
+					<h1 class="content__title">Disney+</h1>
+					<p>O Disney+ é um serviço de streaming que oferece uma ampla variedade de filmes, séries e conteúdos de diversas marcas, incluindo Disney, Pixar, Marvel, Star Wars e National Geographic. Ele se tornou uma plataforma popular para os fãs de diferentes gêneros de entretenimento.</p><br>
+					<a href="https://www.disneyplus.com/" target="_blank" class="button button--reverse">Acessar streamer</a>
 				</div>
 			</section>		
 		</main>
-
-
-
-
-
 
 		<footer class="footer" id="footer">
 			<p>©2023</p> 
@@ -81,5 +96,6 @@
 
 	</div>
 
+	<script src="script.js"></script>
 </body>
 </html>
